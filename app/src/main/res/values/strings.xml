@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Kala Bama</string>
+    <string name="app_name_fa">کالا باما</string>
+    <string name="loginTxt">برای ورود یا ثبت نام در کالا‌باما شماره موبایل یا پست الکترونیک خود را وارد نمایید</string>
+    <string name="phone_and_email">شماره موبایل یا پست الکترونیک</string>
+    <string name="kalabama_entry">ورود به کالا‌باما</string>
+    <string name="terms_and_rules_full">با ورود و یا ثبت نام در کالا‌باما شما شرایط و قوانین استفاده از سرویس های سایت کالا‌باما و قوانین حریم خصوصی آن را می پذیرید.</string>
+    <string name="terms_and_rules">شرایط و قوانین</string>
+    <string name="privacy_and_rules">قوانین حریم خصوصی</string>
+    <string name="login_error">فرمت شماره تلفن یا ایمیل صحیح نیست.</string>
+    <string name="set_password_text">لطفا یک رمز عبور برای خود تعیین کنید و یا اگر قبلا ثبت‌نام کرده‌اید، رمز عبور خود را وارد کنید.</string>
+    <string name="set_password">رمز عبور خود را وارد کنید</string>
+    <string name="kalabama_login">بزن بریم!</string>
+    <string name="password_error">اطلاعات وارد شده صحیح نیست</string>
+    <string name="password_format_error">پسورد باید حداقل 6 رقم باشد</string>
+
+    <string name="suggested_for_you">پیشنهادهایی فقط برای تو</string>
+
+    <string name="digi_style">حراج استایل</string>
+    <string name="pindo">پیندو</string>
+    <string name="gift_card">کارت هدیه</string>
+    <string name="digi_shopping">خرید سر ماه</string>
+
+    <string name="specialTop">محصولات فروش ویژه</string>
+
+    <string name="user_comments">دیدگاه کاربران</string>
+    <string name="view" >بازدید</string>
+
+    <string name="your_comment">دیدگاه شما</string>
+
+
+    <string name="very_bad">خیلی بد</string>
+    <string name="bad">بد</string>
+    <string name="normal">معمولی</string>
+    <string name="good">خوب</string>
+    <string name="very_good">عالی</string>
+
+    <string name="say_your_comment">دیدگاه خود را شرح دهید</string>
+    <string name="comment_title">عنوان نظر</string>
+    <string name="comment_text">متن نظر *</string>
+
+    <string name="set_new_comment">ثبت دیدگاه</string>
+    <string name="comment_anonymously">ارسال دیدگاه به صورت ناشناس</string>
+
+    <string name="comment_title_null">عنوان کامنت وارد نشده است!</string>
+    <string name="comment_star_null">امتیاز(ستاره) کامنت وارد نشده است!</string>
+    <string name="comment_body_null">متن کامنت وارد نشده است!</string>
+
+    <string name="so_so_comment">آنچنان مناسب نبود</string>
+    <string name="bad_comment">خرید این محصول را توصیه نمیکنم</string>
+    <string name="good_comment">توصیه میکنم</string>
+
+    <string name="return_to_home_page">بازگشت به صفحه اصلی</string>
+    <string name="order_status">وضعیت سفارش</string>
+    <string name="order_code">کد سفارش</string>
+    <string name="waiting_for_purchase">در انتظار پرداخت</string>
+    <string name="purchase_is_ok">پرداخت موفق بود</string>
+    <string name="final_price">مبلغ قابل پرداخت</string>
+
+
+</resources>
