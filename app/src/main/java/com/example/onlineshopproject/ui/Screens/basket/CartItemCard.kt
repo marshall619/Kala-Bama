@@ -211,7 +211,7 @@ fun CartItemCard(item: CartItem, viewModel: BasketViewModel = hiltViewModel()) {
                         horizontalArrangement = Arrangement.Center
                     ) {
                         Text(
-                            text = digitByLocate(" ${DigitHelper.digitBySeparator(item.price.toString())}"),
+                            text = digitByLocate(" ${digitBySeparator(item.price.toString())}"),
                             style = Typography.h4,
                             color = MaterialTheme.colors.mainColor,
                             fontWeight = FontWeight.Bold
@@ -248,7 +248,7 @@ fun CartItemCard(item: CartItem, viewModel: BasketViewModel = hiltViewModel()) {
                             horizontalArrangement = Arrangement.Center
                         ) {
                             Text(
-                                text = digitByLocate(" ${DigitHelper.digitBySeparator(item.price.toString())}"),
+                                text = digitByLocate(" ${digitBySeparator((item.price * item.count).toString())}"),
                                 style = Typography.h4,
                                 color = MaterialTheme.colors.unSelectedBottomBar,
                                 fontWeight = FontWeight.Bold,
@@ -268,7 +268,7 @@ fun CartItemCard(item: CartItem, viewModel: BasketViewModel = hiltViewModel()) {
                             horizontalArrangement = Arrangement.Center
                         ) {
                             Text(
-                                text = digitByLocate(" ${digitBySeparator(applyDiscount(item.price, item.discountPercent).toString())}"),
+                                text = digitByLocate(" ${digitBySeparator(applyDiscount((item.price * item.count), item.discountPercent).toString())}"),
                                 style = Typography.h4,
                                 color = MaterialTheme.colors.mainColor,
                                 fontWeight = FontWeight.Bold
