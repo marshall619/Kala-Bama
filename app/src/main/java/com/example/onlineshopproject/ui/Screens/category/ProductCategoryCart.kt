@@ -28,9 +28,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.rememberAsyncImagePainter
 import com.example.onlineshopproject.R
+import com.example.onlineshopproject.data.model.basket.CartItem
 import com.example.onlineshopproject.data.model.home.ProductItem
 import com.example.onlineshopproject.navigation.Screens
 import com.example.onlineshopproject.ui.theme.LocalShape
@@ -43,12 +45,14 @@ import com.example.onlineshopproject.ui.theme.specialCartColor
 import com.example.onlineshopproject.util.Constants.PRE_SCREEN
 import com.example.onlineshopproject.util.DigitHelper
 import com.example.onlineshopproject.util.DigitHelper.digitByLocate
+import com.example.onlineshopproject.viewModel.BasketViewModel
 
 @Composable
 fun ProductCategoryCart(
     item: ProductItem, color: Color,
     navController: NavController,
     pre_Screen: String,
+    viewModel: BasketViewModel = hiltViewModel(),
 ) {
     Card(
         modifier = Modifier
@@ -95,7 +99,22 @@ fun ProductCategoryCart(
                         .clip(CircleShape)
                         .background(MaterialTheme.colors.specialCartColor)
                         .clickable {
-                            //todo do add to basket
+                            viewModel.insertCartItem(
+                                CartItem(
+                                    item._id,
+                                    item.discountPercent,
+                                    item.image,
+                                    item.name,
+                                    item.price,
+                                    item.seller,
+                                    1
+                                )
+                            )
+                            navController.navigate(Screens.Basket.route){
+                                popUpTo(Screens.Category.route){
+                                    inclusive = true
+                                }
+                            }
                         },
                     contentAlignment = Alignment.Center
                 ) {
