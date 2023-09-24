@@ -2,6 +2,7 @@ package com.example.onlineshopproject.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -19,13 +20,14 @@ import com.example.onlineshopproject.ui.theme.LocalSpacing
 import com.example.onlineshopproject.ui.theme.gradientBackGroundColor
 
 @Composable
-fun CenterBannerItem(url: String) {
+fun CenterBannerItem(url: String , OnClick : () -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .height(170.dp)
             .padding(LocalSpacing.current.medium)
-            .background(MaterialTheme.colors.gradientBackGroundColor),
+            .background(MaterialTheme.colors.gradientBackGroundColor)
+            .clickable { OnClick() },
         shape = LocalShape.current.semiMedium
     ) {
         Image(

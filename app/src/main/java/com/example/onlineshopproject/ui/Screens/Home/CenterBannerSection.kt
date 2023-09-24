@@ -14,7 +14,7 @@ import com.example.onlineshopproject.ui.components.CenterBannerItem
 import com.example.onlineshopproject.viewModel.HomeViewModel
 
 @Composable
-fun CenterBannerSection(bannerId : Int , viewModel: HomeViewModel = hiltViewModel()){
+fun CenterBannerSection(bannerId : Int , viewModel: HomeViewModel = hiltViewModel(),onClick : () -> Unit){
     var centerBanners by remember { mutableStateOf<List<SliderItem>>(emptyList()) }
     var loading by remember { mutableStateOf(false) }
 
@@ -37,6 +37,6 @@ fun CenterBannerSection(bannerId : Int , viewModel: HomeViewModel = hiltViewMode
     }
 
     if (centerBanners.isNotEmpty()){
-        CenterBannerItem(url = centerBanners[bannerId - 1].image)
+        CenterBannerItem(url = centerBanners[bannerId - 1].image){onClick()}
     }
 }

@@ -24,6 +24,7 @@ import androidx.navigation.NavController
 import com.example.onlineshopproject.R
 import com.example.onlineshopproject.data.model.home.SliderItem
 import com.example.onlineshopproject.data.remote.NetworkResult
+import com.example.onlineshopproject.navigation.Screens
 import com.example.onlineshopproject.ui.components.HandLoading
 import com.example.onlineshopproject.ui.components.SetLoadingStatus
 import com.example.onlineshopproject.ui.theme.LocalSpacing
@@ -58,9 +59,9 @@ private fun Home(navController: NavController, viewModel: HomeViewModel = hiltVi
         LazyColumn() {
             item { TopSliderSection(navController = navController) }
             item { ShowCaseSection(navController) }
-            item { CenterBannerSection(1) }
+            item { CenterBannerSection(1){navController.navigate(Screens.WebView.route + "?url=https://ghazaland.com/")} }
             item { SuggestedForYou(navController) }
-            item { CenterBannerSection(3) }
+            item { CenterBannerSection(3){navController.navigate(Screens.WebView.route + "?url=https://shalmod.com/")} }
             item { SpecialItemsSection(navController) }
         }
     }
